@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.anime-item {
+    width: 220px;
+    margin: 15px;
+    flex: 0 1 auto;
+
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.anime-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) { /* Для планшетов и меньше */
+    .anime-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .anime-item {
+        width: 100%;
+    }
+}
+
+.pagination {
+    margin: 20px 0;
+}
+
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Центруем содержимое */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.search-bar {
+    width: 300px; /* Ширина поля поиска */
+    padding: 10px; /* Внутренние отступы для удобства */
+    border: 2px solid #ffffff; /* Рамка с цветом */
+    border-radius: 25px; /* Скругленные углы */
+    outline: none; /* Убираем стандартную рамку */
+    font-size: 16px; /* Размер текста */
+    transition: border 0.3s; /* Анимация на изменение рамки */
+}
+
+.search-bar:focus {
+    border-color: #383737; /* Цвет рамки при фокусе */
+}
+
+.search-bar::placeholder {
+    color: #999; /* Цвет текста в плейсхолдере */
+}
+
+.search-button {
+    padding: 10px 15px; /* Внутренние отступы */
+    background-color: #FF6B81; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем стандартную рамку */
+    border-radius: 25px; /* Скругленные углы */
+    cursor: pointer; /* Указываем, что элемент можно нажимать */
+    font-size: 16px; /* Размер текста */
+    margin-left: 10px; /* Отступ слева для расстояния от поля поиска */
+    transition: background-color 0.3s; /* Плавная анимация изменения цвета */
+}
+
+.search-button:hover {
+    background-color: #FF2D55; /* Цвет фона при наведении */
+}
+
+.search-button:active {
+    background-color: #C72C4C; /* Цвет фона при нажатии */
+}
+
+.anime-list-title {
+    text-align: center; /* Центрируем заголовок */
+    font-size: 2.5em; /* Размер шрифта */
+    color: #FF6B81; /* Цвет текста */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    text-shadow: 1px 1px 5px rgba(255, 107, 129, 0.5); /* Тень для текста */
+    font-family: 'Arial', sans-serif; /* Шрифт */
+}
+
+.pagination {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: center; /* Центрируем кнопки */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.active-pagination-button {
+    background-color: #FF6B81; /* Розовый фон */
+    color: white; /* Белый цвет текста */
+    border: none; /* Убираем бордер */
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    margin: 0 5px; /* Отступы между кнопками */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указываем курсор как указатель */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.pagination-button {
+    background-color: white;
+    /*color: white; !* Белый цвет текста *!*/
+    border: none; /* Убираем бордер */
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    margin: 0 5px; /* Отступы между кнопками */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указываем курсор как указатель */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}

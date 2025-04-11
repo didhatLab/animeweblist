@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px; /* Добавляем отступы по бокам у body */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #FF6B81;
+    margin-bottom: 20px;
+}
+
+
+p {
+    margin: 10px 0;
+}
+
+strong {
+    color: #FF6B81;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #FF6B81;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+a:hover {
+    background: #FF6B81;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px; /* Меньше отступов по бокам на мобильных */
+    }
+
+    .container {
+        padding: 15px; /* Уменьшаем отступы внутри контейнера на мобильных */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Уменьшаем размер заголовка */
+    }
+
+    a {
+        width: 100%; /* Кнопка занимает всю ширину */
+    }
+}
