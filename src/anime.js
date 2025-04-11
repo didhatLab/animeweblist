@@ -24,7 +24,7 @@ function displayAnimeDetails(anime) {
         <p><strong>Студия:</strong> ${anime.studios.map(studio => studio.name).join(', ')}</p>
         <p><strong>Источник:</strong> ${anime.source}</p>
         <p><strong>Сезон:</strong> ${anime.season} ${anime.year}</p>
-        <a href="../">Назад к списку аниме</a>
+        <a href="/animeweblist">Назад к списку аниме</a>
     `
 }
 
