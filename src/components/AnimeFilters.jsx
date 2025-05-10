@@ -74,6 +74,7 @@ const AnimeFilters = ({ filters, setFilters, onApply, isOpen }) => {
           <option value="pg13">PG-13</option>
           <option value="r17">R-17</option>
           <option value="r">R+</option>
+          <option value="rx">RX</option>
         </select>
       </div>
 
