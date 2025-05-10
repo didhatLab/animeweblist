@@ -284,6 +284,32 @@ button {
     overflow: hidden;
     background: #fafafa;
     border-radius: 4px;
+    touch-action: pan-y pinch-zoom;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.gallery-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+.gallery-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .gallery-nav {
@@ -644,7 +670,6 @@ button {
         padding: 20px;
         gap: 15px;
         transition: right 0.3s ease;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
         z-index: 1001;
     }
 
@@ -666,6 +691,36 @@ button {
     .nav-link.active {
         background: #FF6B81;
         color: white;
+    }
+
+    /* Стили для кнопок Search и Filters */
+    .search-button,
+    .filters-button {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 1.1rem;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .search-button {
+        background: #FF6B81;
+        color: white;
+    }
+
+    .search-button:hover {
+        background: #ff4d6a;
+    }
+
+    .filters-button {
+        background: #f5f5f5;
+        color: #333;
+    }
+
+    .filters-button:hover {
+        background: #eee;
     }
 
     /* Оверлей для блокировки контента */
