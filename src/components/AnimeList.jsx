@@ -158,9 +158,9 @@ const AnimeList = ({ initialFilters = {} }) => {
       ) : (
         <>
           <div className="anime-list">
-            {animeList.map(anime => (
+            {animeList.map((anime, index) => (
               <AnimeCard
-                key={anime.mal_id}
+                key={`${anime.mal_id}-${index}`}
                 anime={anime}
                 onClick={() => handleAnimeClick(anime.mal_id)}
               />

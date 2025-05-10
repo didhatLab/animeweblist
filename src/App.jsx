@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import AnimeList from './components/AnimeList'
 import BestMovies from './components/BestMovies'
@@ -13,7 +13,7 @@ import './style.css'
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<AnimeList />} />
@@ -25,7 +25,7 @@ function App() {
         <Route path="/seasonal" element={<Seasonal />} />
         <Route path="/anime/:id" element={<AnimeDetails />} />
       </Routes>
-    </Router>
+    </>
   )
 }
 
