@@ -3,7 +3,7 @@ import React from 'react'
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const renderPageNumbers = () => {
     const pages = []
-    const maxVisiblePages = 5
+    const maxVisiblePages = window.innerWidth < 768 ? 3 : 5
     const halfVisible = Math.floor(maxVisiblePages / 2)
     
     let startPage = Math.max(1, currentPage - halfVisible)
@@ -13,7 +13,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       startPage = Math.max(1, endPage - maxVisiblePages + 1)
     }
 
-    // First page
     if (startPage > 1) {
       pages.push(
         <button
@@ -29,7 +28,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       }
     }
 
-    // Page numbers
     for (let i = startPage; i <= endPage; i++) {
       pages.push(
         <button
@@ -42,7 +40,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       )
     }
 
-    // Last page
     if (endPage < totalPages) {
       if (endPage < totalPages - 1) {
         pages.push(<span key="end-ellipsis" className="ellipsis">...</span>)
@@ -68,19 +65,23 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="pagination-button"
+        className="pagination-button prev-button"
       >
-        &lt;
+        <span className="button-text">Предыдущая</span>
+        <span className="button-icon">&lt;</span>
       </button>
       
-      {renderPageNumbers()}
+      <div className="page-numbers">
+        {renderPageNumbers()}
+      </div>
       
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="pagination-button"
+        className="pagination-button next-button"
       >
-        &gt;
+        <span className="button-text">Следующая</span>
+        <span className="button-icon">&gt;</span>
       </button>
     </div>
   )
