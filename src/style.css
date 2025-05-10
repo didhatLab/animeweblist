@@ -356,7 +356,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .anime-list {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
@@ -388,7 +388,7 @@ body {
         height: 28px;
         font-size: 0.85em;
     }
-}
+} */
 
 .site-header {
     background: #fff;
